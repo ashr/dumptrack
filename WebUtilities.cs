@@ -101,7 +101,7 @@ namespace dumptrack
 
 		public string GetResponse(string url,bool autoredirect=true)
 		{
-			WebProxy proxyObject = new WebProxy(HTTP_PROXY_ADDR);
+			WebProxy proxyObject = null;
 			ServicePointManager.ServerCertificateValidationCallback +=
 				delegate(
 					object sender, 
@@ -125,8 +125,10 @@ namespace dumptrack
 				return true; // **** Always accept
 			};
 
-			if (EnableProxy) 
+			if (EnableProxy) { 
+				proxyObject = new WebProxy (Config.getInstance ().ProxyAddress);
 				request.Proxy = proxyObject;
+			}
 
 			try
 			{
@@ -156,7 +158,7 @@ namespace dumptrack
 		{
 			try
 			{
-				WebProxy proxyObject = new WebProxy(HTTP_PROXY_ADDR);
+				WebProxy proxyObject = null;
 				System.Net.ServicePointManager.Expect100Continue = false;
 
 				ServicePointManager.ServerCertificateValidationCallback +=
@@ -188,8 +190,10 @@ namespace dumptrack
 					return true; // **** Always accept
 				};
 
-				if (EnableProxy)
+				if (EnableProxy){
+					proxyObject = new WebProxy(Config.getInstance().ProxyAddress);
 					request.Proxy = proxyObject;
+				}
 
 				StringBuilder postData = new StringBuilder();
 				postData.Append(data);
