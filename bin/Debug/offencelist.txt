@@ -1,0 +1,2 @@
+﻿"@yahoo.com"
+"@microsoft.com"

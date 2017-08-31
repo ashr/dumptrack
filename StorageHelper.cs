@@ -2,7 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 
-namespace slackerchat{
+namespace dumptrack{
 	public class StorageHelper{
 		public enum RepoName{
 			SHELL_TEMPLATE = 1,
@@ -10,7 +10,9 @@ namespace slackerchat{
 			TWITTER_FOLLOWERS = 3,
 			TWITTER_TAGLIST = 4,
 			TWITTER_PASTE_DUMPERS = 5,
-			EMAIL_OFFENCES = 6
+			EMAIL_OFFENCES = 6,
+			GITHUB_OFFENCES = 7,
+			GITHUB_BLACKLIST = 8
 		}
 
 		private static Dictionary<RepoName,string> RepositoryPaths = new Dictionary<RepoName, string>(){
@@ -19,7 +21,9 @@ namespace slackerchat{
 			{RepoName.TWITTER_FOLLOWERS,"followedList.txt"},
 			{RepoName.TWITTER_PASTE_DUMPERS,"downloadFollowList.txt"},
 			{RepoName.TWITTER_TAGLIST,"streamTagList.txt"},
-			{RepoName.EMAIL_OFFENCES,"offencelist.txt"}
+			{RepoName.EMAIL_OFFENCES,"offencelist.txt"},
+			{RepoName.GITHUB_OFFENCES, "github-offences.txt"},
+			{RepoName.GITHUB_BLACKLIST,"github-blacklist.txt"}
 		};
 
 		public StorageHelper(){

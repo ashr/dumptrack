@@ -1,0 +1,9 @@
+/home/ashr/dev/linux-dotnet/dumptrack-public/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/ashr/dev/linux-dotnet/dumptrack-public/bin/Debug/Newtonsoft.Json.dll
+/home/ashr/dev/linux-dotnet/dumptrack-public/bin/Debug/offencelist.txt
+/home/ashr/dev/linux-dotnet/dumptrack-public/bin/Debug/dumptrack.exe.config
+/home/ashr/dev/linux-dotnet/dumptrack-public/bin/Debug/dumptrack.pdb
+/home/ashr/dev/linux-dotnet/dumptrack-public/bin/Debug/dumptrack.exe
+/home/ashr/dev/linux-dotnet/dumptrack-public/obj/Debug/dumptrack.exe
+/home/ashr/dev/linux-dotnet/dumptrack-public/obj/Debug/dumptrack.pdb
+/home/ashr/dev/linux-dotnet/dumptrack-public/bin/Debug/HtmlAgilityPack.dll

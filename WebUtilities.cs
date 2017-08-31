@@ -245,7 +245,9 @@ namespace dumptrack
 				HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(URL);
 				request.Method = "POST";
 				request.ContentType = "application/x-www-form-urlencoded";
-				request.UserAgent = "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727; .NET4.0C; .NET4.0E)";
+				request.UserAgent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:55.0) Gecko/20100101 Firefox/55.0";
+				request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8";
+				request.Referer = "https://github.com";
 				request.CookieContainer = cookies;
 				request.AllowAutoRedirect = true;
 
@@ -274,7 +276,7 @@ namespace dumptrack
 				Stream dataStream = request.GetRequestStream();
 				dataStream.Write(byteArray, 0, byteArray.Length);
 				dataStream.Close();
-
+					
 				HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
 				if (response.StatusCode == HttpStatusCode.OK)
