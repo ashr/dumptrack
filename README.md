@@ -1,7 +1,7 @@
 # dumptrack
 .Net hack dump tracker
 
-This little utility uses a custom google search from 'Paste Search by NetBootCamp (90+ sites)'.
+This little utility uses a custom google search from 'Paste Search by NetBootCamp (90+ sites)'. 
 
 We use it internally to find leaked accounts from paste sites, but you could use it to search for and report on anything you want.
 
@@ -16,3 +16,13 @@ You can get an API key by visiting https://code.google.com/apis/console and clic
 
 For your own Custom Search:
 https://developers.google.com/custom-search/
+
+---
+
+Also searching github commits now for offences listed in another file added blacklist functionality to remove items that are not applicable and always come up in the search (like newstools repository)
+
+The design has been modularised to make it easy to add modules that search other places/sites - i will build in onion search functionality soon-ish.
+
+Please help me make this tool a great OSINT toy, our organisation already got massive benefit from it.
+
+
